@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0 as build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN dotnet restore
 COPY . ./
 
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /app
 
 COPY --from=build /app/out .
