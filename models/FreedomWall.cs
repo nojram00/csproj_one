@@ -7,7 +7,7 @@ namespace csproj_one.Models
     public class FreedomWall : BaseModel
     {
         [PrimaryKey("id", false)]
-        public string? Id { get; }
+        public string? Id { get; set; }
 
         [Column("sender")]
         public string? Sender { get; set; } = "Anonymous";
