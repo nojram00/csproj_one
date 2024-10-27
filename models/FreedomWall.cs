@@ -10,7 +10,7 @@ namespace csproj_one.Models
         public string? Id { get; }
 
         [Column("username")]
-        public string Sender { get; set; } = "Anonymous";
+        public string? Sender { get; set; } = "Anonymous";
 
         [Column("password")]
         public string? Content { get; set; }

@@ -36,7 +36,7 @@ namespace csproj_one.Controllers
         public async Task<ActionResult<FreedomWall>> Add(AddFreedomWallDTO data)
         {
             FreedomWall new_wall = new FreedomWall{
-                Sender = data.Sender,
+                Sender = string.IsNullOrEmpty(data.Sender) ? "Anonymous" : data.Sender,
                 Content = data.Content
             } ;
             var result = await _client.From<FreedomWall>()
