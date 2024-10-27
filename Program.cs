@@ -8,6 +8,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers().AddNewtonsoftJson();
 
+builder.Services.AddControllersWithViews();
+
 // Supabase shits:
 // var url =  Environment.GetEnvironmentVariable("SUPABASE_URL") ;
 // var key =  Environment.GetEnvironmentVariable("SUPABASE_KEY");
@@ -35,6 +37,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
+
+app.MapControllerRoute(
+    "default",
+    "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.UseHttpsRedirection();
 

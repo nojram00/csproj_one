@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <div class="flex flex-col gap-3 justify-center items-center h-screen">
+            <h1 class="text-2xl">Welcome humans, to view different endpoints, just scroll down.</h1>
+            <a href="#endpoints" class="btn btn-primary p-3 rounded-md">Let's go!</a>
+        </div>
+        <div class="flex flex-col overflow-x-auto gap-3 h-screen items-center p-5" id="endpoints">
+            <h1 class="text-2xl">API Endpoints</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center text-2xl">Endpoint</th>
+                        <th class="text-center text-2xl">Method</th>
+                        <th class="text-center text-2xl">Description</th>
+                        <th class="text-center text-2xl">Request Body</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center text-lg"><i>/User</i></td>
+                        <td class="text-center text-lg">GET</td>
+                        <td class="text-center text-lg">Get All <b>users</b>.</td>
+                        <td class="text-center text-lg">None</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/User</i></td>
+                        <td class="text-center text-lg">POST</td>
+                        <td class="text-center text-lg">Add a new user.</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>username (string)</li>
+                                <li>password (string)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/User/`user-id`</i></td>
+                        <td class="text-center text-lg">PATCH</td>
+                        <td class="text-center text-lg">Update a user based on `user-id` provided.</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>username (string)</li>
+                                <li>password (string)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/User/`user-id`</i></td>
+                        <td class="text-center text-lg">DELETE</td>
+                        <td class="text-center text-lg">Delete a user based on `user-id` provided.</td>
+                        <td class="text-center text-lg">None</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/BasicMath/add</i></td>
+                        <td class="text-center text-lg">POST</td>
+                        <td class="text-center text-lg">Add a two values</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>value1 (int)</li>
+                                <li>value2 (int)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/BasicMath/subtract</i></td>
+                        <td class="text-center text-lg">POST</td>
+                        <td class="text-center text-lg">Subtract a two values</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>value1 (int)</li>
+                                <li>value2 (int)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/BasicMath/multiply</i></td>
+                        <td class="text-center text-lg">POST</td>
+                        <td class="text-center text-lg">Multiply a two values</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>value1 (int)</li>
+                                <li>value2 (int)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/BasicMath/divide</i></td>
+                        <td class="text-center text-lg">POST</td>
+                        <td class="text-center text-lg">Divide a two values</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>value1 (int)</li>
+                                <li>value2 (int)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/AdvanceMath/exponent</i></td>
+                        <td class="text-center text-lg">POST</td>
+                        <td class="text-center text-lg">Get the exponents based on provided values</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>Base (int)</li>
+                                <li>Exponent (int)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/AdvanceMath/square-root</i></td>
+                        <td class="text-center text-lg">POST</td>
+                        <td class="text-center text-lg">Get a square root of a value</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>value (int)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center text-lg"><i>/AdvanceMath/modulo</i></td>
+                        <td class="text-center text-lg">POST</td>
+                        <td class="text-center text-lg">Get the remainder of two values</td>
+                        <td class="text-center text-lg">
+                            <ul>
+                                <li>value1 (int)</li>
+                                <li>value2 (int)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>    
+        </div>
+    </div>
+</body>
+</html>
