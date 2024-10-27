@@ -9,10 +9,10 @@ namespace csproj_one.Models
         [PrimaryKey("id", false)]
         public string? Id { get; }
 
-        [Column("username")]
+        [Column("sender")]
         public string? Sender { get; set; } = "Anonymous";
 
-        [Column("password")]
+        [Column("content")]
         public string? Content { get; set; }
     }
 }

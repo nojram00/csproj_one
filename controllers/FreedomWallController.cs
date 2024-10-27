@@ -22,7 +22,7 @@ namespace csproj_one.Controllers
             var results = await _client.From<FreedomWall>()
                             .Get();
 
-            return Ok(results);
+            return Ok(results.Models);
         }
 
 
@@ -42,7 +42,7 @@ namespace csproj_one.Controllers
             var result = await _client.From<FreedomWall>()
                             .Insert(new_wall);
 
-            return Ok(result);
+            return Ok(result.Model);
         }
 
         [HttpGet("post/{id}", Name ="Wall")]
@@ -52,7 +52,7 @@ namespace csproj_one.Controllers
                             .Where(wall => wall.Id == id)
                             .Get();
 
-            return Ok(result);
+            return Ok(result.Model);
         }
         
     }
